@@ -52,8 +52,16 @@ if __name__ == "__main__":
     rankings = rank_lichess_bots_all_variants()
     if rankings:
         print("\nLichess Bots Rankings (All Bots by Variant):\n")
+        # Explicitly print the full Bullet ranking
+        if 'bullet' in rankings:
+            print("\nBullet Ranking (Full List):\n")
+            print(rankings['bullet'].to_string(index=False))  # Print full DataFrame without truncation
+        else:
+            print("No Bullet ranking available.")
+        # Optionally print other variants (summarized)
         for variant, ranking in rankings.items():
-            print(f"\n{variant.capitalize()} Ranking:\n")
-            print(ranking)
+            if variant != 'bullet':  # Skip Bullet since we printed it fully
+                print(f"\n{variant.capitalize()} Ranking (Top 5):\n")
+                print(ranking.head(5).to_string(index=False))  # Print only top 5 for others
     else:
         print("No bots found or no valid data.")
