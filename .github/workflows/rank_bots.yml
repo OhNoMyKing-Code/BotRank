@@ -1,14 +1,13 @@
-name: Rank Lichess Bots
+name: Rank Lichess Bots and Upload to Gist
 
 on:
   push:
     branches: [ main ]
   schedule:
-    - cron: '0 0 * * *' # Runs daily at 00:00 UTC
+    - cron: '0 0 * * *' # Chạy hàng ngày lúc 00:00 UTC
 
-# Add permissions to allow writing to the repository
 permissions:
-  contents: write  # Grants write access to repository contents
+  contents: write  # Cho phép ghi vào repository (nếu vẫn commit file)
 
 jobs:
   rank-bots:
@@ -18,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch full history to avoid issues with git push
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -28,17 +27,23 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas
+          pip install pandas requests
 
       - name: Run rank_bots.py
-        run: python rank_bots.py
+        run: python rank_bots.py | tee output.log
 
-      - name: Commit and push changes
+      - name: Upload to Gist
+        env:
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: |
+          python upload_to_gist.py
+
+      - name: Commit and push changes to repository (tùy chọn)
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add *.csv
-          git commit -m "Update Lichess bots ranking CSV files" --allow-empty
+          git add *.csv output.log
+          git commit -m "Cập nhật bảng xếp hạng bot Lichess và log" --allow-empty
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
