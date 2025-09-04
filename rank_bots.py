@@ -1,11 +1,24 @@
 import urllib.request
 import json
 import pandas as pd
+import time
 
-def rank_lichess_bots_all_variants(top_n=50):
+def fetch_with_retry(url, retries=3, delay=5):
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(url) as response:
+                return response.read().decode('utf-8').splitlines()
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                print(f"Rate limit hit, retrying in {delay} seconds...")
+                time.sleep(delay)
+            else:
+                raise
+    raise Exception("Failed to fetch data after retries")
+
+def rank_lichess_bots_all_variants():
     url = 'https://lichess.org/api/bot/online'
-    with urllib.request.urlopen(url) as response:
-        data = response.read().decode('utf-8').splitlines()
+    data = fetch_with_retry(url)
     
     bots = []
     for line in data:
@@ -29,16 +42,16 @@ def rank_lichess_bots_all_variants(top_n=50):
         if bot_list:
             df = pd.DataFrame(bot_list)
             df_sorted = df.sort_values(by='rating', ascending=False).reset_index(drop=True)
-            rankings[variant] = df_sorted.head(top_n)
+            rankings[variant] = df_sorted
             df_sorted.to_csv(f'lichess_bots_ranking_{variant}.csv', index=False)
             print(f"Ranking for {variant} stored to 'lichess_bots_ranking_{variant}.csv'")
     
     return rankings
 
 if __name__ == "__main__":
-    rankings = rank_lichess_bots_all_variants(top_n=10)
+    rankings = rank_lichess_bots_all_variants()
     if rankings:
-        print("\nTop Lichess Bots Rankings (by Variant):\n")
+        print("\nLichess Bots Rankings (All Bots by Variant):\n")
         for variant, ranking in rankings.items():
             print(f"\n{variant.capitalize()} Ranking:\n")
             print(ranking)
