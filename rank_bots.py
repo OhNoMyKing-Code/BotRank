@@ -40,10 +40,8 @@ def rank_lichess_bots_all_variants():
                 bot_list.append({'username': bot['username'], 'rating': rating})
         if bot_list:
             df = pd.DataFrame(bot_list)
-            # Sắp xếp theo rating và thêm cột rank bắt đầu từ 1
-            df_sorted = df.sort_values(by='rating', ascending=False)
-            df_sorted['rank'] = df_sorted.index + 1
-            df_sorted = df_sorted[['rank', 'username', 'rating']]  # Chỉ giữ 3 cột
+            # Sắp xếp theo rating từ cao đến thấp
+            df_sorted = df.sort_values(by='rating', ascending=False).reset_index(drop=True)
             rankings[variant] = df_sorted
             df_sorted.to_csv(f'lichess_bots_ranking_{variant}.csv', index=False, encoding='utf-8')
             print(f"Ranking for {variant} stored to 'lichess_bots_ranking_{variant}.csv' with {len(df_sorted)} bots")
@@ -53,19 +51,11 @@ def rank_lichess_bots_all_variants():
 if __name__ == "__main__":
     rankings = rank_lichess_bots_all_variants()
     if rankings:
-        print("\nLichess Bots Rankings (All Bots by Variant):\n")
-        # Hiển thị toàn bộ Bullet ranking với định dạng đơn giản
-        if 'bullet' in rankings:
-            print("\nBullet Ranking (Full List):\n")
-            for _, row in rankings['bullet'].iterrows():
-                print(f"{row['rank']},{row['username']},{row['rating']}")
-        else:
-            print("No Bullet ranking available.")
-        # Hiển thị top 5 cho các variant khác
+        print("\nLichess Bots Rankings (All Bots by Variant - Full List):\n")
+        # Hiển thị toàn bộ danh sách cho tất cả variant
         for variant, ranking in rankings.items():
-            if variant != 'bullet':
-                print(f"\n{variant.capitalize()} Ranking (Top 5):\n")
-                for _, row in ranking.head(5).iterrows():
-                    print(f"{row['rank']},{row['username']},{row['rating']}")
+            print(f"\n{variant.capitalize()} Ranking (Full List):\n")
+            for _, row in ranking.iterrows():
+                print(f"{row['username']},{row['rating']}")
     else:
         print("No bots found or no valid data.")
