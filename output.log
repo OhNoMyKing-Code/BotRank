@@ -1,270 +1,292 @@
-Ranking for bullet stored to 'lichess_bots_ranking_bullet.csv'
-Ranking for blitz stored to 'lichess_bots_ranking_blitz.csv'
-Ranking for rapid stored to 'lichess_bots_ranking_rapid.csv'
-Ranking for classical stored to 'lichess_bots_ranking_classical.csv'
-Ranking for chess960 stored to 'lichess_bots_ranking_chess960.csv'
-Ranking for crazyhouse stored to 'lichess_bots_ranking_crazyhouse.csv'
-Ranking for antichess stored to 'lichess_bots_ranking_antichess.csv'
-Ranking for kingOfTheHill stored to 'lichess_bots_ranking_kingOfTheHill.csv'
-Ranking for threeCheck stored to 'lichess_bots_ranking_threeCheck.csv'
-Ranking for horde stored to 'lichess_bots_ranking_horde.csv'
-Ranking for racingKings stored to 'lichess_bots_ranking_racingKings.csv'
+Ranking for bullet stored to 'lichess_bots_ranking_bullet.csv' with 185 bots
+Ranking for blitz stored to 'lichess_bots_ranking_blitz.csv' with 185 bots
+Ranking for rapid stored to 'lichess_bots_ranking_rapid.csv' with 185 bots
+Ranking for classical stored to 'lichess_bots_ranking_classical.csv' with 185 bots
+Ranking for chess960 stored to 'lichess_bots_ranking_chess960.csv' with 61 bots
+Ranking for crazyhouse stored to 'lichess_bots_ranking_crazyhouse.csv' with 28 bots
+Ranking for antichess stored to 'lichess_bots_ranking_antichess.csv' with 30 bots
+Ranking for kingOfTheHill stored to 'lichess_bots_ranking_kingOfTheHill.csv' with 23 bots
+Ranking for threeCheck stored to 'lichess_bots_ranking_threeCheck.csv' with 21 bots
+Ranking for horde stored to 'lichess_bots_ranking_horde.csv' with 24 bots
+Ranking for racingKings stored to 'lichess_bots_ranking_racingKings.csv' with 21 bots
 
 Lichess Bots Rankings (All Bots by Variant):
 
 
-Bullet Ranking:
-
-                username  rating
-0       Sooraj_Kumar_P_S    3369
-1         LeelaMultiPoss    3321
-2        Endogenetic-Bot    3224
-3         IndianGuyPlayz    3220
-4          Bharat_royals    3203
-..                   ...     ...
-181      LouisChess48-6K    1173
-182              Cimille    1082
-183           Zerbinetto     796
-184  StupidfishBOTBYDSCS     779
-185     MinOpponentMoves     767
-
-[186 rows x 2 columns]
-
-Blitz Ranking:
-
-                username  rating
-0         LeelaMultiPoss    3277
-1          Bharat_royals    3066
-2               YoBot_v2    3053
-3               Cheszter    3048
-4         VEER-OMEGA-BOT    3045
-..                   ...     ...
-181          sargon-1ply    1136
-182              Cimille     953
-183     MinOpponentMoves     725
-184           Zerbinetto     717
-185  StupidfishBOTBYDSCS     694
-
-[186 rows x 2 columns]
-
-Rapid Ranking:
-
-                username  rating
-0         LeelaMultiPoss    3328
-1        Funeddy-Robotik    3117
-2        InvinxibleFlxsh    3106
-3              Yuki_1324    3093
-4             NecroMindX    3091
-..                   ...     ...
-181          sargon-1ply    1283
-182              Cimille     939
-183           Zerbinetto     712
-184     MinOpponentMoves     580
-185  StupidfishBOTBYDSCS     458
-
-[186 rows x 2 columns]
-
-Classical Ranking:
-
-                username  rating
-0         LeelaMultiPoss    3057
-1        InvinxibleFlxsh    2908
-2          Alexnajax_Fan    2904
-3         VEER-OMEGA-BOT    2892
-4               YoBot_v2    2886
-..                   ...     ...
-181       DavidsGuterBot    1312
-182              Cimille     954
-183  StupidfishBOTBYDSCS     839
-184           Zerbinetto     819
-185     MinOpponentMoves     566
-
-[186 rows x 2 columns]
-
-Chess960 Ranking:
+Bullet Ranking (Full List):
 
             username  rating
-0     LeelaMultiPoss    2569
-1         NecroMindX    2482
-2    InvinxibleFlxsh    2482
-3   eNErGyOFbEiNGbOT    2475
-4     VEER-OMEGA-BOT    2466
-..               ...     ...
-57       Groot123456    1034
-58       Demolito_L1     913
-59        Zerbinetto     745
-60         pawnrobot     693
-61  MinOpponentMoves     419
+    Sooraj_Kumar_P_S    3369
+     Endogenetic-Bot    3224
+      IndianGuyPlayz    3220
+       Bharat_royals    3203
+            FayEFish    3189
+     BOT_Stockfish13    3164
+           HIWIN1234    3160
+            tbhOnBot    3156
+    eNErGyOFbEiNGbOT    3152
+         TacticalBot    3150
+      VEER-OMEGA-BOT    3149
+       PINEAPPLEMASK    3148
+ Speeedrunchessgames    3146
+     InvinxibleFlxsh    3146
+          NecroMindX    3142
+           Yuki_1324    3139
+            pangubot    3133
+      Exogenetic-Bot    3131
+        MaggiChess16    3130
+              DeKoog    3129
+               BSTAF    3116
+     ElPeonElectrico    3102
+            RaspFish    3102
+     strain-on-veins    3100
+           DarkOnBot    3100
+            YoBot_v2    3097
+      Classic_BOT-v2    3094
+       Alexnajax_Fan    3094
+            Bot1nokk    3093
+           GCNbyFayE    3092
+      ChampionKitten    3092
+   AlwaysPlayMystery    3092
+Moment-That-Inspires    3087
+            Cheszter    3086
+          Alexandrya    3073
+            colinbot    3066
+Ukraine-team-creator    3063
+           PetersBot    3051
+         ResoluteBot    3019
+          cinder-bot    2999
+       SupraNova_V11    2909
+         PatriciaBot    2884
+       Legend_Engine    2879
+          PZChessBot    2856
+         Gold_Engine    2805
+        Elite_Engine    2799
+         odonata-bot    2795
+           duchessAI    2795
+            Weiawaga    2788
+          MAGIC11BOT    2755
+            pawn_git    2755
+     ClockworkEngine    2731
+   TheUnforgivingBot    2727
+          admete_bot    2690
+        SeitoGaKatsu    2669
+          OliThink-5    2660
+      simbelmyne-bot    2658
+             ArasanX    2645
+ Humuhumunukunukuapu    2631
+    ViolentStockfish    2615
+            Meltd0wn    2609
+            Lynx_BOT    2592
+          bot_adario    2565
+   Euwe-chess-engine    2550
+           bitbitbot    2536
+     SleepMindEngine    2530
+               GNU4u    2519
+         chess-2-bot    2497
+         bot64jaques    2389
+       ChessNoobComp    2377
+     Casanchess-NNUE    2376
+       Humaia-Strong    2375
+          GlueWinner    2371
+          GNUPassant    2366
+          PeachFruit    2349
+         RavenEngine    2340
+          Nakshatra3    2332
+          FataliiBot    2321
+        WolfuhfuhBot    2313
+       fornax-engine    2298
+          simpleEval    2274
+           Elmichess    2274
+          halcyonbot    2269
+     Goldfish-Engine    2262
+            TroutBot    2261
+   SimpleChessEngine    2253
+          pruningBot    2234
+         VariantsBot    2212
+      fathzer-jchess    2203
+           SomeGoBot    2177
+  TribbleChessEngine    2170
+   Boosted_Maia_1900    2165
+           Hyperopic    2164
+          maello_bot    2160
+           natto-bot    2138
+              matmoi    2137
+     likeawizard-bot    2124
+         Eichkatzerl    2092
+             jangine    2086
+              sseh-c    2069
+         Demolito_L6    2068
+      RadianceEngine    2048
+            GarboBot    2030
+   Boosted_Maia_1700    2013
+      littlePatricia    2012
+      ArchduchessBot    2008
+        AconcaguaBot    2008
+       KrakenChessAI    2000
+            charibot    2000
+       LeelaRookOdds    2000
+      LeelaQueenOdds    2000
+      LeelaPieceOdds    2000
+     LeelaKnightOdds    2000
+         AshNostromo    2000
+      worst_colinbot    2000
+             Gryndor    2000
+ LeelaQueenForKnight    2000
+          hummus-bot    2000
+     Funeddy-Robotik    2000
+             purwani    2000
+            Implosio    2000
+         Annie_Archy    2000
+     croissantdealer    2000
+      StreamerVSChat    2000
+         Walleye_Bot    1997
+      chesstango_bot    1957
+           rudim-bot    1922
+        QueensGamBOT    1811
+              ai-con    1806
+   Boosted_Maia_1500    1800
+     MaxtheDog-ESP32    1800
+           mochi_bot    1789
+         Demolito_L5    1786
+              Jibbby    1744
+       SomePythonBot    1733
+              turkjs    1723
+               maia9    1710
+         Demolito_L4    1708
+           RookRusty    1697
+             BerkBot    1688
+           DanerdBot    1673
+               maia1    1630
+           melsh_bot    1630
+         sargon-4ply    1624
+    PARTNER3615DIAGO    1622
+         Demolito_L3    1613
+               maia5    1612
+        waychess-bot    1608
+          R0bspierre    1606
+       schnecken_bot    1605
+   Boosted_Maia_1300    1585
+              Humaia    1571
+         sargon-3ply    1567
+       untrained4406    1533
+      bernstein-4ply    1518
+        whychess-bot    1516
+   cppchess_engineV1    1516
+         Demolito_L2    1502
+      turochamp-2ply    1501
+           WorstFish    1500
+            anti-bot    1500
+          NilatacBot    1500
+             Lurch_0    1500
+             Lurch_1    1500
+     fred-fast-chess    1500
+             CatNail    1500
+      DavidsGuterBot    1494
+            joshsbot    1480
+           Terconari    1472
+          UltraBrick    1439
+         Demolito_L1    1439
+      turochamp-1ply    1429
+        wrychess-bot    1421
+           NexaStrat    1411
+       LunaNetEngine    1407
+         Groot123456    1374
+         sargon-2ply    1359
+      bernstein-2ply    1316
+         sargon-1ply    1278
+           pawnrobot    1248
+     LouisChess48-6K    1173
+             Cimille    1082
+          Zerbinetto     796
+ StupidfishBOTBYDSCS     779
+    MinOpponentMoves     767
+Blitz Ranking (Top 5):
 
-[62 rows x 2 columns]
+      username  rating
+ Bharat_royals    3066
+      YoBot_v2    3053
+      Cheszter    3048
+VEER-OMEGA-BOT    3045
+  MaggiChess16    3042
 
-Crazyhouse Ranking:
+Rapid Ranking (Top 5):
 
-                username  rating
-0            VariantsBot    2754
-1            ResoluteBot    2668
-2        InvinxibleFlxsh    2402
-3               YoBot_v2    2394
-4              Yuki_1324    2319
-5           MaggiChess16    2262
-6        ElPeonElectrico    2229
-7               FayEFish    2190
-8              HIWIN1234    2179
-9               tbhOnBot    2140
-10             DarkOnBot    2137
-11           TacticalBot    2130
-12              RaspFish    2099
-13            NecroMindX    2079
-14   Speeedrunchessgames    2079
-15             GCNbyFayE    1919
-16             PetersBot    1911
-17                 BSTAF    1908
-18              colinbot    1774
-19           Groot123456    1543
-20  Ukraine-team-creator    1477
-21        Classic_BOT-v2    1392
-22            MAGIC11BOT    1261
-23              Bot1nokk    1247
-24             pawnrobot    1175
-25            Zerbinetto    1084
-26             DanerdBot     880
-27      MinOpponentMoves     783
+       username  rating
+Funeddy-Robotik    3117
+InvinxibleFlxsh    3106
+      Yuki_1324    3093
+     NecroMindX    3091
+       pangubot    3090
 
-Antichess Ranking:
+Classical Ranking (Top 5):
 
-               username  rating
-0           VariantsBot    3021
-1       Endogenetic-Bot    3020
-2            NecroMindX    2873
-3       strain-on-veins    2729
-4         PINEAPPLEMASK    2696
-5              RaspFish    2682
-6           TacticalBot    2682
-7       ElPeonElectrico    2675
-8   Speeedrunchessgames    2670
-9          MaggiChess16    2643
-10             tbhOnBot    2636
-11            Yuki_1324    2627
-12            HIWIN1234    2623
-13            DarkOnBot    2599
-14             FayEFish    2590
-15             YoBot_v2    2565
-16      InvinxibleFlxsh    2541
-17             colinbot    2535
-18          ResoluteBot    2455
-19           Nakshatra3    2372
-20             anti-bot    2325
-21           NilatacBot    2229
-22              CatNail    2108
-23          Groot123456    1879
-24            pawnrobot    1842
-25           PZChessBot    1746
-26             pangubot    1471
-27            DanerdBot    1233
-28           Zerbinetto    1077
-29     MinOpponentMoves    1031
+       username  rating
+InvinxibleFlxsh    2908
+  Alexnajax_Fan    2904
+ VEER-OMEGA-BOT    2892
+       YoBot_v2    2886
+       pangubot    2880
 
-Kingofthehill Ranking:
+Chess960 Ranking (Top 5):
 
-                username  rating
-0            VariantsBot    2579
-1           MaggiChess16    2465
-2             NecroMindX    2412
-3              HIWIN1234    2383
-4        ElPeonElectrico    2351
-5              DarkOnBot    2349
-6               tbhOnBot    2301
-7            TacticalBot    2261
-8               RaspFish    2259
-9               YoBot_v2    2242
-10           ResoluteBot    2233
-11       InvinxibleFlxsh    2193
-12        VEER-OMEGA-BOT    2192
-13              FayEFish    2181
-14      eNErGyOFbEiNGbOT    2180
-15              colinbot    1946
-16           Groot123456    1553
-17        DavidsGuterBot    1505
-18  Ukraine-team-creator    1476
-19             DanerdBot    1384
-20             pawnrobot    1197
-21            Zerbinetto     988
-22      MinOpponentMoves     928
+        username  rating
+      NecroMindX    2482
+ InvinxibleFlxsh    2482
+eNErGyOFbEiNGbOT    2475
+  VEER-OMEGA-BOT    2466
+  ChampionKitten    2462
 
-Threecheck Ranking:
+Crazyhouse Ranking (Top 5):
 
-            username  rating
-0        VariantsBot    2759
-1       MaggiChess16    2553
-2    ElPeonElectrico    2540
-3           tbhOnBot    2485
-4           FayEFish    2460
-5    InvinxibleFlxsh    2423
-6          HIWIN1234    2421
-7          DarkOnBot    2420
-8           RaspFish    2374
-9     VEER-OMEGA-BOT    2336
-10       TacticalBot    2301
-11          YoBot_v2    2257
-12          colinbot    2219
-13       ResoluteBot    2150
-14       Groot123456    1705
-15    DavidsGuterBot    1548
-16         DanerdBot    1382
-17         pawnrobot    1242
-18        Zerbinetto     977
-19  MinOpponentMoves     910
-20   BOT_Stockfish13     800
+       username  rating
+    VariantsBot    2754
+    ResoluteBot    2668
+InvinxibleFlxsh    2402
+       YoBot_v2    2394
+      Yuki_1324    2319
 
-Horde Ranking:
+Antichess Ranking (Top 5):
 
-               username  rating
-0           VariantsBot    3019
-1       InvinxibleFlxsh    2886
-2          MaggiChess16    2775
-3           TacticalBot    2768
-4             HIWIN1234    2473
-5            NecroMindX    2411
-6   Speeedrunchessgames    2350
-7             Yuki_1324    2344
-8              tbhOnBot    2300
-9              RaspFish    2282
-10             FayEFish    2272
-11      ElPeonElectrico    2262
-12            DarkOnBot    2229
-13            GCNbyFayE    2182
-14          ResoluteBot    2155
-15             YoBot_v2    2019
-16             colinbot    1804
-17          Groot123456    1264
-18           Zerbinetto    1259
-19  Humuhumunukunukuapu    1258
-20            pawnrobot    1256
-21             Bot1nokk    1221
-22        Alexnajax_Fan    1066
-23     MinOpponentMoves     988
+       username  rating
+    VariantsBot    3021
+Endogenetic-Bot    3020
+     NecroMindX    2873
+strain-on-veins    2729
+  PINEAPPLEMASK    2696
 
-Racingkings Ranking:
+Kingofthehill Ranking (Top 5):
 
-            username  rating
-0    Endogenetic-Bot    2871
-1        VariantsBot    2703
-2       MaggiChess16    2675
-3    InvinxibleFlxsh    2622
-4           RaspFish    2557
-5         NecroMindX    2552
-6    strain-on-veins    2545
-7     VEER-OMEGA-BOT    2489
-8          DarkOnBot    2484
-9   eNErGyOFbEiNGbOT    2474
-10          tbhOnBot    2446
-11       TacticalBot    2437
-12          YoBot_v2    2287
-13          colinbot    2287
-14       ResoluteBot    2225
-15   ElPeonElectrico    2153
-16       Groot123456    1501
-17          Bot1nokk    1500
-18         pawnrobot    1415
-19        Zerbinetto    1096
-20  MinOpponentMoves     648
+       username  rating
+    VariantsBot    2579
+   MaggiChess16    2465
+     NecroMindX    2412
+      HIWIN1234    2383
+ElPeonElectrico    2351
+
+Threecheck Ranking (Top 5):
+
+       username  rating
+    VariantsBot    2759
+   MaggiChess16    2553
+ElPeonElectrico    2540
+       tbhOnBot    2485
+       FayEFish    2460
+
+Horde Ranking (Top 5):
+
+       username  rating
+    VariantsBot    3019
+InvinxibleFlxsh    2886
+   MaggiChess16    2775
+    TacticalBot    2768
+      HIWIN1234    2473
+
+Racingkings Ranking (Top 5):
+
+       username  rating
+Endogenetic-Bot    2871
+    VariantsBot    2703
+   MaggiChess16    2675
+InvinxibleFlxsh    2622
+       RaspFish    2557

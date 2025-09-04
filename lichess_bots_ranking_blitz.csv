@@ -1,5 +1,4 @@
 username,rating
-LeelaMultiPoss,3277
 Bharat_royals,3066
 YoBot_v2,3053
 Cheszter,3048
@@ -74,7 +73,7 @@ Elite_Engine,2398
 GlueWinner,2395
 GNUPassant,2392
 fornax-engine,2381
-RavenEngine,2375
+RavenEngine,2377
 TribbleChessEngine,2369
 FataliiBot,2369
 ChessNoobComp,2359
@@ -82,7 +81,7 @@ simpleEval,2317
 Nakshatra3,2307
 TroutBot,2300
 pruningBot,2288
-Goldfish-Engine,2286
+Goldfish-Engine,2278
 WolfuhfuhBot,2271
 halcyonbot,2271
 Hyperopic,2180
@@ -90,7 +89,7 @@ Humaia-Strong,2175
 SomeGoBot,2143
 Boosted_Maia_1900,2116
 fathzer-jchess,2110
-matmoi,2094
+matmoi,2102
 likeawizard-bot,2080
 Eichkatzerl,2068
 jangine,2068
@@ -107,12 +106,12 @@ Gryndor,2000
 Annie_Archy,2000
 LeelaQueenOdds,2000
 LeelaKnightOdds,2000
-LeelaRookOdds,2000
+LeelaPieceOdds,2000
 purwani,2000
 ClockworkEngine,2000
 worst_colinbot,2000
 Legend_Engine,2000
-LeelaPieceOdds,2000
+LeelaRookOdds,2000
 StreamerVSChat,2000
 ArchduchessBot,1996
 Demolito_L5,1972
@@ -140,15 +139,15 @@ RookRusty,1608
 DanerdBot,1589
 Demolito_L3,1577
 maia9,1570
-R0bspierre,1569
+R0bspierre,1568
 waychess-bot,1551
 maia5,1538
 untrained4406,1518
 sargon-3ply,1510
 PARTNER3615DIAGO,1508
-anti-bot,1500
-WorstFish,1500
 VariantsBot,1500
+WorstFish,1500
+anti-bot,1500
 CatNail,1500
 NilatacBot,1500
 fred-fast-chess,1500
