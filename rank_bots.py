@@ -40,9 +40,10 @@ def rank_lichess_bots_all_variants():
                 bot_list.append({'username': bot['username'], 'rating': rating})
         if bot_list:
             df = pd.DataFrame(bot_list)
-            # Thêm cột chỉ số (rank) khi lưu vào CSV
-            df_sorted = df.sort_values(by='rating', ascending=False).reset_index()
-            df_sorted.columns = ['rank', 'username', 'rating']  # Đổi tên cột index thành 'rank'
+            # Sắp xếp theo rating từ cao đến thấp và thêm cột rank bắt đầu từ 1
+            df_sorted = df.sort_values(by='rating', ascending=False)
+            df_sorted['rank'] = df_sorted.index + 1  # Bắt đầu từ 1
+            df_sorted = df_sorted[['rank', 'username', 'rating']]  # Sắp xếp lại cột
             rankings[variant] = df_sorted
             df_sorted.to_csv(f'lichess_bots_ranking_{variant}.csv', index=False, encoding='utf-8')
             print(f"Ranking for {variant} stored to 'lichess_bots_ranking_{variant}.csv' with {len(df_sorted)} bots")
@@ -57,7 +58,7 @@ if __name__ == "__main__":
         if 'bullet' in rankings:
             print("\nBullet Ranking (Full List with Rank):\n")
             for idx, row in rankings['bullet'].iterrows():
-                print(f"{idx + 1}. {row['username']} {row['rating']}")
+                print(f"{row['rank']}. {row['username']} {row['rating']}")
         else:
             print("No Bullet ranking available.")
         # Hiển thị top 5 cho các variant khác với số thứ tự
@@ -65,6 +66,6 @@ if __name__ == "__main__":
             if variant != 'bullet':
                 print(f"\n{variant.capitalize()} Ranking (Top 5 with Rank):\n")
                 for idx, row in ranking.head(5).iterrows():
-                    print(f"{idx + 1}. {row['username']} {row['rating']}")
+                    print(f"{row['rank']}. {row['username']} {row['rating']}")
     else:
         print("No bots found or no valid data.")
