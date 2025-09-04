@@ -40,11 +40,12 @@ def rank_lichess_bots_all_variants():
                 bot_list.append({'username': bot['username'], 'rating': rating})
         if bot_list:
             df = pd.DataFrame(bot_list)
-            df_sorted = df.sort_values(by='rating', ascending=False).reset_index(drop=True)
-            # Save with explicit UTF-8 encoding and no index
+            # Thêm cột chỉ số (rank) khi lưu vào CSV
+            df_sorted = df.sort_values(by='rating', ascending=False).reset_index()
+            df_sorted.columns = ['rank', 'username', 'rating']  # Đổi tên cột index thành 'rank'
+            rankings[variant] = df_sorted
             df_sorted.to_csv(f'lichess_bots_ranking_{variant}.csv', index=False, encoding='utf-8')
             print(f"Ranking for {variant} stored to 'lichess_bots_ranking_{variant}.csv' with {len(df_sorted)} bots")
-            rankings[variant] = df_sorted
     
     return rankings
 
@@ -52,16 +53,18 @@ if __name__ == "__main__":
     rankings = rank_lichess_bots_all_variants()
     if rankings:
         print("\nLichess Bots Rankings (All Bots by Variant):\n")
-        # Ensure full Bullet ranking is displayed without truncation
+        # Hiển thị toàn bộ Bullet ranking với số thứ tự
         if 'bullet' in rankings:
-            print("\nBullet Ranking (Full List):\n")
-            print(rankings['bullet'].to_string(index=False), end='')  # Prevent line truncation
+            print("\nBullet Ranking (Full List with Rank):\n")
+            for idx, row in rankings['bullet'].iterrows():
+                print(f"{idx + 1}. {row['username']} {row['rating']}")
         else:
             print("No Bullet ranking available.")
-        # Display top 5 for other variants to keep output manageable
+        # Hiển thị top 5 cho các variant khác với số thứ tự
         for variant, ranking in rankings.items():
             if variant != 'bullet':
-                print(f"\n{variant.capitalize()} Ranking (Top 5):\n")
-                print(ranking.head(5).to_string(index=False))
+                print(f"\n{variant.capitalize()} Ranking (Top 5 with Rank):\n")
+                for idx, row in ranking.head(5).iterrows():
+                    print(f"{idx + 1}. {row['username']} {row['rating']}")
     else:
         print("No bots found or no valid data.")
